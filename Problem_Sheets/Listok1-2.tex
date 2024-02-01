@@ -1,0 +1,129 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+
+
+%\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{srcltx}
+
+\DeclareMathOperator{\Cone}{Cone} \DeclareMathOperator{\pt}{pt}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\relint}{relint}
+\DeclareMathOperator{\rk}{rk} \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\ver}{Vert}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Herm}{Herm} \DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Pe}{Pe} \DeclareMathOperator{\DS}{DS}
+\DeclareMathOperator{\td}{TD} \DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\ptd}{PTD} \DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\arr}{Arr} \DeclareMathOperator{\Sq}{Sq}
+
+\newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+
+\newcommand{\ko}{\Bbbk}
+\newcommand{\Zo}{\mathbb{Z}}
+\newcommand{\Ro}{\mathbb{R}}
+\newcommand{\Rg}{\mathbb{R}_{\geqslant 0}}
+\newcommand{\Zg}{\mathbb{Z}_{\geqslant 0}}
+\newcommand{\Co}{\mathbb{C}}
+\newcommand{\Qo}{\mathbb{Q}}
+\newcommand{\Noo}{\mathbb{N}}
+\newcommand{\Zt}{\Zo_2}
+
+\newcommand{\eqd}{\stackrel{\text{\tiny def}}{=}}
+\newcommand{\ca}[1]{\mathcal{#1}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\R}{\acute{\mathcal{R}}}
+\newcommand{\dd}{\partial}
+\newcommand{\Ca}{\mathcal{C}}
+\newcommand{\RP}{\mathbb{R}P}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\TD}{\td_{n,\lambda}}
+\newcommand{\PTD}{\ptd_{n,\lambda}}
+\newcommand{\Arr}{\arr_{n,\lambda}}
+\newcommand{\WT}{\mathcal{WT}}
+
+\newcommand{\wt}[1]{\widetilde{#1}}
+
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{prop}{Предложение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{cor}{Следствие}
+\newtheorem{remark}{Замечание}
+\newtheorem{ex}{Пример}
+\newtheorem{defi}{Определение}
+
+
+\newcounter{zadacha}[section]
+%\renewcommand{\thezadacha}{\thesection.\arabic{zadacha}}
+\newcommand{\z}{\par\vspace{0.2cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.\quad}}
+%\newcommand{\z}{\par\vspace{0.5cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.\quad}}
+\newcommand{\zz}{\par\vspace{0.2cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.*\quad}}
+
+\newcommand{\deff}{\par\vspace{0.2cm} \textbf{Определение.}}
+
+\oddsidemargin=1cm \topmargin=0pt \textwidth=14cm \textheight=23cm
+
+\date{}
+
+
+\begin{document}
+
+\begin{center}
+\large{ \textbf{Задачи по топологическому анализу данных} }
+\end{center}
+
+\begin{center}
+\large{\textbf{Листок 1}}
+\end{center}
+
+\z Докажите, что гомеоморфизм пространств $\cong$ является ``отношением эквивалентности'': если $X\cong Y$ и $Y\cong Z$, то $X\cong Z$. В кавычках, потому что отношение эквивалентности обычно рассматривают на множестве, а совокупность всех топологических пространств множеством не является (если их определять как положено, а не как на лекции).
+
+\z Докажите гомеоморфизм $(-1;1)\cong \Ro$.
+
+\z Докажите, что круг гомеоморфен квадрату.
+
+\z Докажите, что если $X\cong Y$ и $X$ компакт, то $Y$ --- тоже компакт. Если речь про подмножества в $\Ro^n$, то [напоминание] компакт --- это замкнутое ограниченное подмножество.
+
+\deff Введем на точках пространства $X$ отношение эквивалентности: скажем, что $x\sim y$, если существует непрерывная кривая $p\colon [0;1]\to X$, такая что $p(0)=x$, $p(1)=y$.
+
+\z Докажите, что это действительно отношение эквивалентности.
+
+Класс эквивалентности точек относительно этого отношения эквивалентности называется \emph{компонентой линейной связности} пространства $X$.
+
+\z Докажите, что если $X\cong Y$, то у $X$ и $Y$ одинаковое число компонент линейной связности (то есть между компонентами связности $X$ и компонентами связности $Y$ можно установить биекцию).
+
+\z Пусть $f,g\colon [0,1]\to [0,1]$, $f(x)=x$, $g(x)=0$. Докажите, что отображения $f$ и $g$ гомотопны, построив явную гомотопию между ними.
+
+\z Докажите, что гомотопность является отношением эквивалентности на множестве непрерывных отображений из $X$ в $Y$.
+
+\z Докажите, что гомотопическая эквивалентность является ``отношением эквивалентности'' на топологических пространствах.
+
+\deff Пространство $X$ называется стягиваемым, если оно гомотопически эквивалентно точке.
+
+\z Докажите, что $n$-мерный шар стягиваем. Докажите, что любое выпуклое множество в $\Ro^n$ стягиваемо.
+
+\zz Докажите, что геометрическая реализация конечного графа стягиваема тогда и только тогда, когда граф --- дерево.
+
+\z Пусть $f,g\colon X\to Y$ гомотопны и $h\colon Y\to Z$ --- какое-то отображение. Докажите, что $h\circ f$ и $h\circ g$ --- гомотопные отображения из $X$ в $Z$. Аналогично, если $f\sim g\colon X\to Y$ и $k\colon Z\to X$, то $f\circ k\sim g\circ k$.
+
+\z Докажите, что число компонент связности является инвариантом гомотопической эквивалентности.
+
+\z (1) Придумайте алгоритм проверки одномерного симплициального комплекса на стягиваемость. (2) Придумайте алгоритм проверки двух одномерных симплициальных комплексов на гомотопическую эквивалентность.
+
+\zz Придумайте алгоритм проверки двух одномерных симплициальных комплексов на гомеоморфизм.
+
+
+
+\end{document}
