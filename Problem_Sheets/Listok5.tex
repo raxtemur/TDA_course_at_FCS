@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+
+
+%\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{srcltx}
+
+\DeclareMathOperator{\Cone}{Cone} \DeclareMathOperator{\pt}{pt}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\relint}{relint}
+\DeclareMathOperator{\rk}{rk} \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Imm}{Im}
+\DeclareMathOperator{\ver}{Vert}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Herm}{Herm} \DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Pe}{Pe} \DeclareMathOperator{\DS}{DS}
+\DeclareMathOperator{\td}{TD} \DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\ptd}{PTD} \DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\arr}{Arr} \DeclareMathOperator{\Sq}{Sq}
+\DeclareMathOperator{\Hilb}{P}
+
+\newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+
+\newcommand{\ko}{\Bbbk}
+\newcommand{\Zo}{\mathbb{Z}}
+\newcommand{\Ro}{\mathbb{R}}
+\newcommand{\Rg}{\mathbb{R}_{\geqslant 0}}
+\newcommand{\Zg}{\mathbb{Z}_{\geqslant 0}}
+\newcommand{\Co}{\mathbb{C}}
+\newcommand{\Qo}{\mathbb{Q}}
+\newcommand{\Noo}{\mathbb{N}}
+\newcommand{\Zt}{\Zo_2}
+
+\newcommand{\eqd}{\stackrel{\text{\tiny def}}{=}}
+\newcommand{\ca}[1]{\mathcal{#1}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\R}{\acute{\mathcal{R}}}
+\newcommand{\dd}{\partial}
+\newcommand{\Ca}{\mathcal{C}}
+\newcommand{\RP}{\mathbb{R}P}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\TD}{\td_{n,\lambda}}
+\newcommand{\PTD}{\ptd_{n,\lambda}}
+\newcommand{\Arr}{\arr_{n,\lambda}}
+\newcommand{\WT}{\mathcal{WT}}
+
+\newcommand{\wt}[1]{\widetilde{#1}}
+
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{prop}{Предложение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{cor}{Следствие}
+\newtheorem{remark}{Замечание}
+\newtheorem{ex}{Пример}
+\newtheorem{defi}{Определение}
+
+
+\newcounter{zadacha}[section]
+%\renewcommand{\thezadacha}{\thesection.\arabic{zadacha}}
+\newcommand{\z}{\par\vspace{0.2cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.\quad}}
+%\newcommand{\z}{\par\vspace{0.5cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.\quad}}
+\newcommand{\zz}{\par\vspace{0.2cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.*\quad}}
+
+\newcommand{\deff}{\par\vspace{0.2cm} \textbf{Определение.}}
+
+\oddsidemargin=1cm \topmargin=0pt \textwidth=14cm \textheight=23cm
+
+\date{}
+
+
+\begin{document}
+
+\begin{center}
+\large{ \textbf{Задачи по топологическому анализу данных} }
+\end{center}
+
+\begin{center}
+\large{\textbf{Листок 5}}
+\end{center}
+
+Пусть $K$ --- симплициальный комплекс. $j$=мерным остовом $K^{(j)}$ называется симплициальный комплекс
+\[
+\{I\in K\mid \dim I\leqslant j\}.
+\]
+
+\zz Пусть $K$ --- симплициальный комплекс. Рассмотрим фильтрацию
+\[
+K^{(0)}\subset K^{(1)}\subset K^{(2)}\subset\cdots
+\]
+составленную из остовов комплекса $K$. Опишите устойчивые гомологии этой фильтрации.
+
+\z [программирование/алгоритм] Решите последнюю задачу из последнего листка формально с помощью алгоритма Гаусса (либо вручную преобразовав матрицу, либо запрограммировав соответствующую процедуру).
+
+\z [программирование/алгоритм] Возьмите инструкцию к вашему любимому набору Лего (pdf-ки инструкций можно скачать с официального сайта), и постройте диаграмму устойчивости для этой инструкции. Предполагайте, что каждая отдельная деталь --- стягиваемая (т.е. не имеет собственных нетривиальных топологических признаков), а время ее рождения --- номер шага в инструкции, на котором показано, куда эта деталь прицепляется. Вариант со звездочкой: взять инструкции к Lego Technic.
+
+\z [программирование/алгоритм] Фильтрация графов с вещественным временем задана при помощи перечисления вершин и ребер вместе с временами их рождения:
+\begin{multline*}
+(\{1\},0), (\{2\},0), (\{3\},0), (\{1,2\},2), (\{4\},2.5), (\{5\},3), (\{2,3\},3), \\ (\{3,4\},3.7), (\{1,4\},4), (\{1,5,\},4.3),  (\{4,5\},5),  (\{3,5\},7.9),  (\{6\},8),\\ (\{1,6\},9), (\{2,6\},9.3), (\{3,6\},9), (\{2,5\},10.2), (\{4,6\},12).
+\end{multline*}
+Вычислите диаграмму устойчивости для соответствующей фильтрации Вьеториса--Рипса.
+
+\end{document}

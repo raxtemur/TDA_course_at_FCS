@@ -1,0 +1,128 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+
+
+%\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{srcltx}
+
+\DeclareMathOperator{\Cone}{Cone} \DeclareMathOperator{\pt}{pt}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\relint}{relint}
+\DeclareMathOperator{\rk}{rk} \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Imm}{Im}
+\DeclareMathOperator{\ver}{Vert}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Herm}{Herm} \DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Pe}{Pe} \DeclareMathOperator{\DS}{DS}
+\DeclareMathOperator{\td}{TD} \DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\ptd}{PTD} \DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\arr}{Arr} \DeclareMathOperator{\Sq}{Sq}
+\DeclareMathOperator{\Hilb}{P}
+
+\newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+
+\newcommand{\ko}{\Bbbk}
+\newcommand{\Zo}{\mathbb{Z}}
+\newcommand{\Ro}{\mathbb{R}}
+\newcommand{\Rg}{\mathbb{R}_{\geqslant 0}}
+\newcommand{\Zg}{\mathbb{Z}_{\geqslant 0}}
+\newcommand{\Co}{\mathbb{C}}
+\newcommand{\Qo}{\mathbb{Q}}
+\newcommand{\Noo}{\mathbb{N}}
+\newcommand{\Zt}{\Zo_2}
+
+\newcommand{\eqd}{\stackrel{\text{\tiny def}}{=}}
+\newcommand{\ca}[1]{\mathcal{#1}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\R}{\acute{\mathcal{R}}}
+\newcommand{\dd}{\partial}
+\newcommand{\Ca}{\mathcal{C}}
+\newcommand{\RP}{\mathbb{R}P}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\TD}{\td_{n,\lambda}}
+\newcommand{\PTD}{\ptd_{n,\lambda}}
+\newcommand{\Arr}{\arr_{n,\lambda}}
+\newcommand{\WT}{\mathcal{WT}}
+
+\newcommand{\wt}[1]{\widetilde{#1}}
+
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{prop}{Предложение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{cor}{Следствие}
+\newtheorem{remark}{Замечание}
+\newtheorem{ex}{Пример}
+\newtheorem{defi}{Определение}
+
+
+\newcounter{zadacha}[section]
+%\renewcommand{\thezadacha}{\thesection.\arabic{zadacha}}
+\newcommand{\z}{\par\vspace{0.2cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.\quad}}
+%\newcommand{\z}{\par\vspace{0.5cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.\quad}}
+\newcommand{\zz}{\par\vspace{0.2cm}\noindent\addtocounter{zadacha}{1} \textbf{Задача \thezadacha.*\quad}}
+
+\newcommand{\deff}{\par\vspace{0.2cm} \textbf{Определение.}}
+
+\oddsidemargin=1cm \topmargin=0pt \textwidth=14cm \textheight=23cm
+
+\date{}
+
+
+\begin{document}
+
+\begin{center}
+\large{ \textbf{Задачи по топологическому анализу данных} }
+\end{center}
+
+\begin{center}
+\large{\textbf{Листок 4}}
+\end{center}
+
+\z Докажите, что при $n=\dim K$, числа Бетти и $f$-числа комплекса $K$ связаны соотношением
+\[
+f_0-f_1+f_2-f_3+\cdots+(-1)^nf_n = \beta_0-\beta_1+\beta_2+\cdots+(-1)^n\beta_n.
+\]
+
+Замечание: Число
+\[
+\chi(K)=f_0-f_1+\cdots+(-1)^nf_n = \beta_0-\beta_1+\beta_2+\cdots+(-1)^n\beta_n
+\]
+называется \emph{эйлеровой характеристикой} симплициального комплекса $K$.
+
+\z Докажите, что эйлерова характеристика удовлетворяет формуле включения-исключения
+\[
+\chi(K\cup L)=\chi(K)+\chi(L)-\chi(K\cap L).
+\]
+
+\z Докажите, что для симплициального комплекса $K$, гомеоморфного сфере $S^{n-1}$ выполнена формула Эйлера:
+\[
+f_0-f_1+\cdots+(-1)^{n-1}f_{n-1}=1+(-1)^{n-1}.
+\]
+
+\z Докажите, что задание модуля устойчивости $V_0\stackrel{\to}{x} V_1\stackrel{\to}{x} V_2\stackrel{\to}{x}\cdots\stackrel{\to}{x} V_m\stackrel{\to}{x}\cdots$ эквивалентно заданию структуры градуированного $\ko[x]$-модуля на векторном пространстве $\bigoplus_{i=0}^\infty V_i$ (если вы не знаете, что такое модуль над кольцом, то это хороший повод пообщаться с семинаристом).
+
+\z Пусть $0\leqslant j<s<k$. Докажите, что модуль устойчивости $I_{[j,s)}\oplus I_{[s,k)}$ не изоморфен модулю $I_{[j,k)}$, хотя в любой отдельный момент времени эти модули изоморфны.
+
+\z Докажите, что множество симплексов фильтрации можно линейно упорядочить (отсортировать) по временам рождения таким образом, что каждый симплекс появляется в списке не раньше чем его грани (т.е. подмножества). 
+
+\zz Пусть $L\subset K$ и $K\setminus L$ состоит из одного $j$-мерного симплекса. Тогда при переходе от $L$ к $K$ верно одно из двух:
+\begin{itemize}
+  \item $(j-1)$-ое число Бетти уменьшается на 1.
+  \item $j$-ое число Бетти увеличивается на 1.
+\end{itemize}
+Другие числа Бетти не меняются.
+
+\z (на интуитивное геометрическое понимание) Нарисуйте баркод и вычислите времена жизни циклов для фильтрации, заданной следующим образом. В момент времени $0$ родились 3 вершины $\{1\},\{2\},\{3\}$. В момент времени $4$ родились ребра $\{1,2\}$, $\{2,3\}$ и вершина $\{4\}$. В момент времени $5$ родились ребра $\{1,4\}$, $\{3,4\}$. В момент времени $7$ родилось ребро $\{1,3\}$. В момент времени $10$ родилось ребро $\{2,4\}$. В момент времени $16$ родились треугольники $\{1,2,3\}$, $\{1,2,4\}$, $\{1,3,4\}$. В момент времени $20$ родился треугольник $\{2,3,4\}$. В момент времени $23$ родился тетраэдр $\{1,2,3,4\}$. Каковы гомологии комплекса в момент времени $9$?
+
+\end{document}
